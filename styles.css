@@ -45,3 +45,32 @@ h2 {
 .selected {
   background: #ffe5d9;
 }
+#searchBox {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#searchBox:focus {
+  outline: none;
+  border-color: #c0392b;
+}
+
+#showAllBtn {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#showAllBtn:hover {
+  background: #a93226;
+}
