@@ -32,3 +32,16 @@ h2 {
 .selected {
   background: #ffe5d9;
 }
+
+.recipe {
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.recipe:hover {
+  background: #f0f0f0;
+}
+
+.selected {
+  background: #ffe5d9;
+}
