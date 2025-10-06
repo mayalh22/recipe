@@ -29,3 +29,6 @@ h1 {
 h2 {
   color: #c0392b;
 }
+.selected {
+  background: #ffe5d9;
+}
