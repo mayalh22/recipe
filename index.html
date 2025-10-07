@@ -771,6 +771,24 @@
         <p>these are a great vegetarian alternative to traditional lasagna</p>
       </div>
     </div>
+    <section id="comments" style="margin: 2rem auto; max-width: 600px;">
+  <h3>Leave a Comment</h3>
+  <form id="commentForm">
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem;" /><br /><br />
+    
+    <label for="comment">Comment:</label><br />
+    <textarea id="comment" name="comment" rows="4" required style="width: 100%; padding: 0.5rem;"></textarea><br /><br />
+    
+    <button type="submit" style="padding: 0.5rem 1rem;">Submit</button>
+  </form>
+  
+  <div id="commentsList" style="margin-top: 2rem;">
+    <h4>Comments:</h4>
+    <ul style="list-style-type: none; padding-left: 0;"></ul>
+  </div>
+</section>
+
     <!-- end of the main recipes container -->
   </div>
   <!-- start of the footer section -->
