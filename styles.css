@@ -1,11 +1,13 @@
+/* global styles */
+
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background: #8b0000;
+  background: #490505;
   color: #fdf6e3;
   min-height: 100vh;
   padding: 2rem 1rem;
 }
-
+/*centered content container w/ background and shadows*/
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -13,7 +15,7 @@ body {
   background: #c7bca3;
   box-shadow: 0 8px 20px rgba(61, 30, 10, 0.4);
 }
-
+/*page title*/
 h1 {
   text-align: center;
   margin-bottom: 2rem;
@@ -25,7 +27,7 @@ h1 {
   border-bottom: 2px solid #de8f40;
   padding-bottom: 1rem;
 }
-
+/*search box*/
 #searchBox {
   flex: 1 1 100%;
   width: 100%;
@@ -48,7 +50,7 @@ h1 {
   color: #a0826d;
   font-style: italic;
 }
-
+/*show all button*/
 #showAllBtn {
   padding: 0.75rem 1.5rem;
   margin-bottom: 2rem;
@@ -65,12 +67,12 @@ h1 {
   background: #b8541a;
   border-color: #5d2f0c
 }
-
+/*recipe grid layout*/
 .recipes {
   display: grid;
   gap: 1.5rem;
 }
-
+/*individual recipe card*/
 .recipe {
   margin-bottom: 0;
   padding: 1.5rem;
@@ -85,7 +87,7 @@ h1 {
   border-color: #cd853f;
   box-shadow: 0 4px 8px rgba(139, 69, 19, 0.2);
 }
-
+/*recipe title*/
 .recipe h2 {
   color: #a0522d;
   margin-bottom: 1rem;
@@ -95,7 +97,7 @@ h1 {
   border-bottom: 1px solid #daa520;
   padding-bottom: 0.5rem;
 }
-
+/*recipe paragraphs*/
 .recipe p {
   line-height: 1.8;
   margin-bottom: 0.75rem;
@@ -113,7 +115,7 @@ h1 {
   color: #795548;
   font-style: italic;
 }
-
+/*highlighted recipe card*/
 .selected {
   background: #ffe4b5;
   border-color: #ff8c00;
@@ -124,7 +126,7 @@ h1 {
   background: #ffe4b5;
   border-color: #ff8c00;
 }
-
+/* collapsed recipe card */
 .recipe.collapsed {
   opacity: 0.5;
 }
@@ -132,7 +134,7 @@ h1 {
 .recipe.collapsed:hover {
   opacity: 0.75;
 }
-
+/* responsive styles */
 @media (max-width: 768px) {
   body {
     padding: 1rem;
@@ -154,7 +156,7 @@ h1 {
     font-size: 1.125rem;
   }
 }
-
+/*random recipe button next to show all*/
 #randomBtn {
   padding: 0.75rem 1.5rem;
   margin-bottom: 2rem;
