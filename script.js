@@ -1,39 +1,44 @@
+
+//run after full page load//
 document.addEventListener('DOMContentLoaded', () => {
+  //get references to DOM elements//
   const recipes = document.querySelectorAll('.recipe')
   const searchBox = document.getElementById('searchBox')
   const showAllBtn = document.getElementById('showAllBtn')
 
-  let selectedRecipe = null;
+  let selectedRecipe = null; //track currently selected recipe//
 
+  //hide all recipe details initially//
   const hideRecipeDetails = (recipe) => {
     recipe.querySelectorAll('p').forEach(p => {
       p.style.display = 'none';
     });
   };
-
+//show recipe details//
   const showRecipeDetails = (recipe) => {
     recipe.querySelectorAll('p').forEach(p => {
       p.style.display = 'block';
     });
   };
-
+//select a recipe card, and highlight//
   const selectRecipe = (recipe) => {
+    //if another recipe is selected, deselect it//
     if (selectedRecipe) {
       selectedRecipe.classList.remove('selected');
       hideRecipeDetails(selectedRecipe);
     }
-
+//highlight current recipe, show details//
     recipe.classList.add('selected');
     showRecipeDetails(recipe);
     selectedRecipe = recipe;
-
+//smooth scroll selected recipe into view//
     recipe.scrollIntoView({
       behavior: 'smooth',
       block: 'center',
       inline: 'nearest'
     });
   };
-
+//deselect currently selected recipe//
   const deselectRecipe = () => {
     if (selectedRecipe) {
       selectedRecipe.classList.remove('selected');
@@ -41,13 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
       selectedRecipe = null;
     }
   };
-
+  //initialize all recipe cards//
   recipes.forEach(recipe => {
     hideRecipeDetails(recipe);
 
     recipe.addEventListener('click', (e) => {
       e.stopPropagation();
-
+//toggle selection//
       if (recipe === selectedRecipe) {
         deselectRecipe();
       } else {
@@ -55,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
+//search functionality//
   if (searchBox) {
     const performSearch = (searchTerm) => {
       const term = searchTerm.toLowerCase().trim();
@@ -77,12 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
           recipe.classList.add('collapsed');
         }
       });
-
+//remove existing no-results message//
       const existingMessage = document.querySelector('.no-results');
       if (existingMessage) {
         existingMessage.remove();
       }
-
+//if no matches, show no-results message//
       if (visibleCount === 0 && term !== '') {
         const noResults = document.createElement('div');
         noResults.className = 'no-results';
@@ -91,15 +96,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.recipes').appendChild(noResults);
       }
     };
-
+//performs search on input events//
     searchBox.addEventListener('input', (e) => {
       performSearch(e.target.value);
-
+//deselect recipe if search box not empty//
       if (e.target.value.trim() !== '') {
         deselectRecipe();
       }
     });
-
+//clear search on esc key//
     searchBox.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         searchBox.value = '';
@@ -108,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
+//show all recipes button functionality//
   if (showAllBtn) {
     showAllBtn.addEventListener('click', () => {
       recipes.forEach(recipe => {
@@ -116,47 +121,34 @@ document.addEventListener('DOMContentLoaded', () => {
         recipe.classList.remove('collapsed');
       });
 
-      deselectRecipe();
+      deselectRecipe(); //deselect any selected recipe//
 
       if (searchBox) {
-        searchBox.value = '';
+        searchBox.value = ''; //clear search box//
       }
 
       const existingMessage = document.querySelector('.no-results');
       if (existingMessage) {
-        existingMessage.remove();
+        existingMessage.remove(); //remove no-results message//
       }
-
+//scroll to top smoothly//
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-
+//click outside recipe or press esc to deselect//
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.recipe')) {
       deselectRecipe();
     }
   });
-
+//pressing esc key deselects recipe//
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       deselectRecipe();
     }
   });
 });
-searchBox.addEventListener('input', () => {
-  const query = searchBox.value.toLowerCase();
-  recipes.forEach(recipe => {
-    const title = recipe.querySelector('h2').textContent.toLowerCase();
-    const ingredients = recipe.textContent.toLowerCase();
-
-    if (title.includes(query) || ingredients.includes(query)) {
-      recipe.style.display = 'block';
-    } else {
-      recipe.stye.display = 'none';
-    }
-  });
-});
-
+//random recipe button functionality//
 const randomBtn = document.getElementById('randomBtn');
 
 randomBtn.addEventListener('click', () => {
@@ -164,3 +156,18 @@ randomBtn.addEventListener('click', () => {
   const randomRecipe = recipeArray[Math.floor(Math.random() * recipeArray.length)];
   selectRecipe(randomRecipe);
 });
+//function to select and highlight a recipe//
+  const selectRecipe = (recipe) => {
+    const selectedRecipe = document.querySelector('.selected');
+    if (selectedRecipe) {
+      selectedRecipe.classList.remove('selected');
+      selectedRecipe.querySelectorAll('p').forEach(p => p.style.display = 'none');
+    }
+
+    recipe.classList.add('selected');
+    recipe.querySelectorAll('p').forEach(p => p.style.display = 'block');
+    recipe.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
+  };
