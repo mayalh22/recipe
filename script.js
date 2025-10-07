@@ -13,10 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   //show all button//
   const randomBtn = document.getElementById('randomBtn');
   //random recipe button//
-
   let selectedRecipe = null;
   //track currently selected recipe//
-
   //hide all recipe details initially//
   const hideRecipeDetails = (recipe) => {
     //hide all paragraphs in a recipe card//
@@ -81,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //for each recipe card//
     hideRecipeDetails(recipe);
     //hide details initially//
-
     recipe.addEventListener('click', (e) => {
       //on recipe click//
       e.stopPropagation();
@@ -107,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
       //normalize search term//
       let visibleCount = 0;
       //track number of visible recipes//
-
       recipes.forEach(recipe => {
         //for each recipe card//
         //check if title or any paragraph contains search term//
@@ -117,10 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
         //get all paragraphs//
         const allText = [title, ...paragraphs.map(p => p.textContent.toLowerCase())].join(' ');
         //combine all text//
-
         const matches = term === '' || allText.includes(term);
         //check for match//
-
         if (matches) {
           //if match found//
           recipe.style.display = 'block';
@@ -202,15 +196,12 @@ document.addEventListener('DOMContentLoaded', () => {
         recipe.classList.remove('collapsed');
         //remove collapsed class//
       });
-
       deselectRecipe();
       //deselect any selected recipe//
-
       if (searchBox) {
         searchBox.value = '';
         //clear search box//
       }
-
       const existingMessage = document.querySelector('.no-results');
       //remove existing no-results message//
       if (existingMessage) {
@@ -257,23 +248,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-
 document.getElementById('commentForm').addEventListener('submit', function (event) {
   event.preventDefault();
-
   const name = event.target.name.value.trim();
   const comment = event.target.comment.value.trim();
   if (!name || !comment) return;
-
   const commentsList = document.querySelector('#commentsList ul');
   const newComment = document.createElement('li');
   newComment.style.borderBottom = "1px solid #ddd";
   newComment.style.padding = "0.5rem 0";
   newComment.innerHTML = `<strong>${name}</strong>: ${comment}`;
-
   commentsList.appendChild(newComment);
-
   // reset form
   event.target.reset();
 });
