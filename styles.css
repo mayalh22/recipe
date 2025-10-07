@@ -107,7 +107,7 @@ h1 {
   color: #6d4c41
 }
 
-recipe p:last-of-type {
+.recipe p:last-of-type {
   margin-bottom: 0;
   color: #795548;
   font-style: italic;
