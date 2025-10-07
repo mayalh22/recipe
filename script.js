@@ -259,21 +259,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.getElementById('commentForm').addEventListener('submit', function(event) {
+document.getElementById('commentForm').addEventListener('submit', function (event) {
   event.preventDefault();
-  
+
   const name = event.target.name.value.trim();
   const comment = event.target.comment.value.trim();
   if (!name || !comment) return;
-  
+
   const commentsList = document.querySelector('#commentsList ul');
   const newComment = document.createElement('li');
   newComment.style.borderBottom = "1px solid #ddd";
   newComment.style.padding = "0.5rem 0";
   newComment.innerHTML = `<strong>${name}</strong>: ${comment}`;
-  
+
   commentsList.appendChild(newComment);
-  
+
   // reset form
   event.target.reset();
 });
