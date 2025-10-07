@@ -5,31 +5,44 @@
 /* global styles */
 
 /* base body styles, typography, background, padding*/
-body { 
-  font-family: Georgia, 'Times New Roman', Times, serif; /*font*/
-  background: #5f2104; /*deep brown background*/
-  color: #431f0e; /*brown text*/
-  min-height: 100vh; /*ensures full height of viewport*/
-  padding: 2rem 1rem; /*space around the content*/
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /*font*/
+  background: #5f2104;
+  /*deep brown background*/
+  color: #431f0e;
+  /*brown text*/
+  min-height: 100vh;
+  /*ensures full height of viewport*/
+  padding: 2rem 1rem;
+  /*space around the content*/
 }
 
 /*centered content container w/ background and shadows*/
 .container {
-  max-width: 900px; /*max width for readability */
-  margin: 0 auto; /*center horizontally */
-  padding: 2.5rem; /*inner spacing */
-  background: #c7bca3; /*light neutral background for contrast */
-  box-shadow: 0 8px 20px rgba(61, 30, 10, 0.4); /*soft shadow*/
+  max-width: 900px;
+  /*max width for readability */
+  margin: 0 auto;
+  /*center horizontally */
+  padding: 2.5rem;
+  /*inner spacing */
+  background: #c7bca3;
+  /*light neutral background for contrast */
+  box-shadow: 0 8px 20px rgba(61, 30, 10, 0.4);
+  /*soft shadow*/
 }
 
 /*page title*/
 h1 {
-  text-align: center; /*centering text*/
-  margin-bottom: 2rem; /*spacing below the heading*/
+  text-align: center;
+  /*centering text*/
+  margin-bottom: 2rem;
+  /*spacing below the heading*/
   font-size: 2.5rem;
   color: #4e3f34;
   font-weight: normal;
-  letter-spacing: 2px; /*wider*/
+  letter-spacing: 2px;
+  /*wider*/
   text-transform: lowercase;
   border-bottom: 2px solid #de8f40;
   padding-bottom: 1rem;
@@ -209,6 +222,7 @@ footer {
   background: #b22222;
   border-color: #5c0000;
 }
+
 .search-wrapper {
   display: flex;
   justify-content: center;
