@@ -1,6 +1,6 @@
 # recipe
 
-recipe website!
+recipe website! (for fall) - made by maya hazarika
 
 this is a recipe website with >60 recipes from breakfast to dessert
 
@@ -10,4 +10,4 @@ each recipe has a title/dish name, list of required ingredients, and step by ste
 
 i used html5, css3, and vanilla js
 
-i think later on i might add tags/categories, images, cooking time, quantity of ingredients
+i think later on i might add tags/categories, images
