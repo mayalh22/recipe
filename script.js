@@ -1,3 +1,5 @@
+//script.js//
+//by maya hazarika, oct 2025//
 
 //run after full page load//
 document.addEventListener('DOMContentLoaded', () => {
@@ -156,18 +158,3 @@ randomBtn.addEventListener('click', () => {
   const randomRecipe = recipeArray[Math.floor(Math.random() * recipeArray.length)];
   selectRecipe(randomRecipe);
 });
-//function to select and highlight a recipe//
-  const selectRecipe = (recipe) => {
-    const selectedRecipe = document.querySelector('.selected');
-    if (selectedRecipe) {
-      selectedRecipe.classList.remove('selected');
-      selectedRecipe.querySelectorAll('p').forEach(p => p.style.display = 'none');
-    }
-
-    recipe.classList.add('selected');
-    recipe.querySelectorAll('p').forEach(p => p.style.display = 'block');
-    recipe.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-    });
-  };
