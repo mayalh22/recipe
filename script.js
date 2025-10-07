@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
-    //random recipe button functionality//
+  //random recipe button functionality//
   if (randomBtn) {
     randomBtn.addEventListener('click', () => {
       const recipeArray = Array.from(recipes);
