@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-searchBox.addEventListener('input', () +> {
+searchBox.addEventListener('input', () => {
   const query = searchBox.value.toLowerCase();
   recipes.forEach(recipe=> {
     const title = recipe.querySelector('h2').textContent.toLowerCase();
