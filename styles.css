@@ -3,33 +3,34 @@
 
 /* global styles */
 
-body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  background: #492d05;
-  color: #431f0e;
-  min-height: 100vh;
-  padding: 2rem 1rem;
+/* base body styles, typography, background, padding*/
+body { 
+  font-family: Georgia, 'Times New Roman', Times, serif; /*font*/
+  background: #492d05; /*deep brown background*/
+  color: #431f0e; /*brown text*/
+  min-height: 100vh; /*ensures full height of viewport*/
+  padding: 2rem 1rem; /*space around the content*/
 }
 
 /*centered content container w/ background and shadows*/
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2.5rem;
-  background: #c7bca3;
-  box-shadow: 0 8px 20px rgba(61, 30, 10, 0.4);
+  max-width: 900px; /*max width for readability */
+  margin: 0 auto; /*center horizontally */
+  padding: 2.5rem; /*inner spacing */
+  background: #c7bca3; /*light neutral background for contrast */
+  box-shadow: 0 8px 20px rgba(61, 30, 10, 0.4); /*soft shadow*/
 }
 
 /*page title*/
 h1 {
-  text-align: center;
-  margin-bottom: 2rem;
+  text-align: center; /*centering text*/
+  margin-bottom: 2rem; /*spacing below the heading*/
   font-size: 2.5rem;
   color: #4e3f34;
   font-weight: normal;
-  letter-spacing: 2px;
+  letter-spacing: 2px; /*wider*/
   text-transform: lowercase;
-  border-bottom: 2px solid #de8f40;
+  border-bottom: 2px solid #de8f40; /*decorative*/
   padding-bottom: 1rem;
 }
 
