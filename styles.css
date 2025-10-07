@@ -96,6 +96,7 @@ h1 {
   text-transform: lowercase;
   border-bottom: 1px solid #daa520;
   padding-bottom: 0.5rem;
+  text-align: center;
 }
 /*recipe paragraphs*/
 .recipe p {
