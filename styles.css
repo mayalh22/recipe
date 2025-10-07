@@ -1,7 +1,7 @@
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background: #702e2e;
-  color: #3e2723;
+  background: #8b0000;
+  color: #fdf6e3;
   min-height: 100vh;
   padding: 2rem 1rem;
 }
@@ -27,6 +27,7 @@ h1 {
 }
 
 #searchBox {
+  flex: 1 1 100%;
   width: 100%;
   padding: 0.85rem 1rem;
   margin-bottom: 1rem;
