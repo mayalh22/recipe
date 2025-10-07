@@ -184,3 +184,46 @@ footer {
   margin-top: 3rem;
   font-size: 0.9rem;
 }
+
+.actions {
+  margin-bottom: 2rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#showAllBtn, #randomBtn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: Georgia, serif;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 200px;
+}
+
+#showAllBtn {
+  background: #d2691e;
+  color: #fdf5e6;
+  border-color: #8b4513;
+}
+
+#showAllBtn:hover {
+  background: #b8541a;
+  border-color: #5d2f0c;
+}
+
+#randomBtn {
+  background: #cd5c5c;
+  color: #fff8dc;
+  border-color: #8b0000;
+}
+
+#randomBtn:hover {
+  background: #b22222;
+  border-color: #5c0000;
+}
