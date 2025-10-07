@@ -1,33 +1,36 @@
 # recipe
 
-Recipe viewer app by Maya Hazarika
+Recipe Viewer Site by Maya Hazarika
 
-This is a clean and responsive web app for browsing, searching, and selecting recipes. It uses serif fonts and earthly colors (brown and bold)/
+This is a clean and responsive web app for browsing, searching, and selecting recipes. It uses serif fonts and earthy colors (warm browns and golds).
 
-I built this mostly for fun as my final (hopefully) Athena project to practice more front-end stuff with JS. For this project, I also focused on adding a buttload of code comments to be very clear (in script.js I used so many comments it’s basically translated to English). I did add some fun parts like ESC key handling. Thanks for checking this out!!!!!
+I built this mostly for fun as my final (hopefully) Athena project to practice more front-end stuff with JavaScript. I also decided to do something very different:
 
-- I usually never add comments at all - this time I added them like every other line. it helped me keep track of the structure, styling decisions, behaviors. Plus, it makes the code easier for anyone else who might want to use it
-- If you are one of the few who skips commenting, I recommend giving it a try. It slows you down initially, but it pays off! It's sort of like showing your work during math tests. In a way...
+- add a ton of comments
 
-It features:
+Usually, I skip commenting almost entirely. But this time, I added comments on basically every other line. It helped me keep track of the code’s structure, styling decisions, and behaviors. Plus, it makes the code way easier for anyone else who might want to read or use it.
 
-- Recipe cards (clickable) showing recipe titles, clicking expands and collapses details
-- Search functionality in real time, filtering recipes by title and content
-- Show all button for resetting search and displaying all recipes
-- Random recipe button, selecting and highlighting a random recipe
-- Responsive design, working on mobile and desktop
-- Smooth scrolling
-- Keyboard accessibility — ESC key clears search and deselects recipes
-- fully integrated comments section letting users share feedback (not using storage yet)
+If you’re like me and usually avoid comments, I recommend giving it a try. It slows you down at first, but it really pays off. It’s kind of like showing your work in a math test — super helpful in the long run!
 
-I used:
+Features:
 
-- HTML5
-- CSS3
-- Vanilla JS
+- Clickable recipe cards showing recipe titles; clicking expands and collapses details  
+- Real-time search filtering recipes by title and content  
+- “Show All” button to reset search and show all recipes  
+- “Random Recipe” button to select and highlight a random recipe  
+- Responsive design, works on mobile and desktop  
+- Smooth scrolling for anchor navigation  
+- Keyboard accessibility — ESC key clears search and deselects recipes  
+- Fully integrated comments section letting users share feedback (not storing data yet)
 
-Made by Maya Hazarika, last updated October 2025
+Built Witch:
 
-Thanks ;)
+- HTML5  
+- CSS3  
+- Vanilla JavaScript  
+
+Thanks for checking this out!
+
+Made by Maya Hazarika, last updated October 2025  
 
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
