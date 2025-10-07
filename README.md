@@ -22,6 +22,7 @@ Features:
 - Smooth scrolling for anchor navigation
 - Keyboard accessibility — ESC key clears search and deselects recipes
 - Fully integrated comments section letting users share feedback (not storing data yet)
+- fun notes with every recipe - add ons or relevant info
 
 Built Witch:
 
