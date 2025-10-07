@@ -1,5 +1,6 @@
 //script.js//
 //by maya hazarika, oct 2025//
+//this handles the app's interactivity, selecting and deselecting recipe cards, filtering based on search input, showing all recipes, selecting at random, smooth scrolling//
 
 //run after full page load//
 document.addEventListener('DOMContentLoaded', () => {
