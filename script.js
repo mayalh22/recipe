@@ -143,6 +143,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+searchBox.addEventListener('input', () +> {
+  const query = searchBox.value.toLowerCase();
+  recipes.forEach(recipe=> {
+    const title = recipe.querySelector('h2').textContent.toLowerCase();
+    const ingredients = recipe.textContent.toLowerCase();
+
+    if (title.includes(query) || ingredients.includes(query)) {
+      recipe.style.display = 'block';
+    } else {
+      recipe.stye.display = 'none';
+    }
+  });
+});
 
 const randomBtn = document.getElementById('randomBtn');
 
