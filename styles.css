@@ -5,6 +5,7 @@
 
 /* global styles */
 body {
+  background-color: #5f2104;
   font-family: Georgia, 'Times New Roman', Times, serif;
   /* classic serif font */
   background-image: radial-gradient(circle, #a16b39 1px, transparent 1px);
