@@ -266,13 +266,18 @@ footer {
 
 /* Comments Section - styled to blend with warm, earthy theme */
 #comments {
-  background-color: #c7bca3; /* same as container background */
-  border: 2px solid #8b4513; /* saddle brown border */
+  background-color: #c7bca3;
+  /* same as container background */
+  border: 2px solid #8b4513;
+  /* saddle brown border */
   padding: 1.5rem 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(61, 30, 10, 0.2); /* subtle shadow matching container */
+  box-shadow: 0 4px 8px rgba(61, 30, 10, 0.2);
+  /* subtle shadow matching 
+  container */
   font-family: Georgia, 'Times New Roman', serif;
-  color: #431f0e; /* dark brown text */
+  color: #431f0e;
+  /* dark brown text */
   margin-top: 3rem;
 }
 
@@ -280,18 +285,21 @@ footer {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.8rem;
-  color: #5f2104; /* deep warm brown */
+  color: #5f2104;
+  /* deep warm brown */
   font-weight: normal;
   text-transform: lowercase;
   letter-spacing: 1.5px;
-  border-bottom: 2px solid #de8f40; /* warm gold underline */
+  border-bottom: 2px solid #de8f40;
+  /* warm gold underline */
   padding-bottom: 0.5rem;
 }
 
 #commentForm label {
   font-weight: bold;
   font-size: 1.05rem;
-  color: #5d4037; /* dark coffee brown */
+  color: #5d4037;
+  /* dark coffee brown */
   display: block;
   margin-bottom: 0.4rem;
 }
@@ -299,13 +307,15 @@ footer {
 #commentForm input[type="text"],
 #commentForm textarea {
   width: 100%;
-  border: 2px solid #cd853f; /* peru */
+  border: 2px solid #cd853f;
+  /* peru */
   border-radius: 6px;
   font-family: Georgia, serif;
   font-size: 1rem;
   padding: 0.6rem 0.8rem;
   margin-bottom: 1rem;
-  background: #fff8dc; /* cornsilk */
+  background: #fff8dc;
+  /* cornsilk */
   color: #431f0e;
   transition: border-color 0.3s ease;
   resize: vertical;
@@ -314,14 +324,18 @@ footer {
 
 #commentForm input[type="text"]:focus,
 #commentForm textarea:focus {
-  border-color: #8b4513; /* saddle brown */
-  background: #fffaf0; /* floral white */
+  border-color: #8b4513;
+  /* saddle brown */
+  background: #fffaf0;
+  /* floral white */
   outline: none;
 }
 
 #commentForm button {
-  background-color: #de8f40; /* warm gold */
-  color: #5f2104; /* deep warm brown */
+  background-color: #de8f40;
+  /* warm gold */
+  color: #5f2104;
+  /* deep warm brown */
   border: none;
   padding: 0.7rem 1.4rem;
   font-size: 1.1rem;
@@ -333,12 +347,14 @@ footer {
 }
 
 #commentForm button:hover {
-  background-color: #b87318; /* darker gold */
+  background-color: #b87318;
+  /* darker gold */
   box-shadow: 0 3px 8px rgba(184, 115, 24, 0.8);
 }
 
 #commentsList h4 {
-  color: #6d4c41; /* medium brown */
+  color: #6d4c41;
+  /* medium brown */
   margin-bottom: 0.75rem;
   font-weight: normal;
   font-size: 1.3rem;
