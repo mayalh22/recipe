@@ -10,7 +10,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: 2.5rem;
-  background: #fdf536;
+  background: #c7bca3;
   box-shadow: 0 8px 20px rgba(61, 30, 10, 0.4);
 }
 
@@ -22,7 +22,7 @@ h1 {
   font-weight: normal;
   letter-spacing: 2px;
   text-transform: lowercase;
-  border-bottom: 2px solid #cd853f;
+  border-bottom: 2px solid #de8f40;
   padding-bottom: 1rem;
 }
 
