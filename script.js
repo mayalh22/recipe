@@ -257,6 +257,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
 document.getElementById('commentForm').addEventListener('submit', function(event) {
   event.preventDefault();
   
@@ -272,6 +274,6 @@ document.getElementById('commentForm').addEventListener('submit', function(event
   
   commentsList.appendChild(newComment);
   
-  // Reset form
+  // reset form
   event.target.reset();
 });
