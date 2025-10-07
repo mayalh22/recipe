@@ -143,3 +143,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+const randomBtn = document.getElementById('randomBtn');
+
+randomBtn.addEventListener('click', () => {
+  const recipeArray = Array.from(recipes);
+  const randomRecipe = recipeArray[Math.floor(Math.random() * recipeArray.length)];
+  selectRecipe(randomRecipe);
+});
