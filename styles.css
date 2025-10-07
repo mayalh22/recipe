@@ -7,15 +7,16 @@
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   /* classic serif font */
-  background-image: radial-gradient(circle, #5f2104 1px, transparent 1px);
+  background-image: radial-gradient(circle, #a16b39 1px, transparent 1px);
   background-size: 20px 20px;
-  color: #431f0e;
+  color: #f3e9dc;
   /* dark brown text */
   min-height: 100vh;
   /* full viewport height */
   padding: 2rem 1rem;
   /* content padding */
 }
+
 .container {
   max-width: 900px;
   /* max container width */
@@ -28,6 +29,7 @@ body {
   box-shadow: 0 8px 20px rgba(61, 30, 10, 0.4);
   /* subtle shadow */
 }
+
 h1 {
   text-align: center;
   margin-bottom: 2rem;
@@ -41,6 +43,7 @@ h1 {
   /* warm gold */
   padding-bottom: 1rem;
 }
+
 /* search box */
 #searchBox {
   flex: 2 1 300px;
@@ -55,6 +58,7 @@ h1 {
   font-family: Georgia, serif;
   transition: border-color 0.3s ease;
 }
+
 #searchBox:focus {
   outline: none;
   border-color: #8b4513;
@@ -62,16 +66,19 @@ h1 {
   background: #fffaf0;
   /* floral white */
 }
+
 #searchBox::placeholder {
   color: #a0826d;
   /* muted brown */
   font-style: italic;
 }
+
 /* recipe grid & cards */
 .recipes {
   display: grid;
   gap: 1.5rem;
 }
+
 .recipe {
   padding: 1.5rem;
   border: 2px solid #daa520;
@@ -82,6 +89,7 @@ h1 {
   transition: all 0.3s ease;
   margin-bottom: 0;
 }
+
 .recipe:hover {
   background: #fff8e1;
   /* light cream */
@@ -90,6 +98,7 @@ h1 {
   box-shadow: 0 4px 8px rgba(139, 69, 19, 0.2);
   /* soft brown shadow */
 }
+
 .recipe h2 {
   color: #a0522d;
   /* sienna */
@@ -102,6 +111,7 @@ h1 {
   padding-bottom: 0.5rem;
   text-align: center;
 }
+
 .recipe p {
   font-size: 0.95rem;
   line-height: 1.8;
@@ -109,17 +119,20 @@ h1 {
   color: #5d4037;
   /* dark coffee brown */
 }
+
 .recipe p:first-of-type {
   font-weight: bold;
   color: #6d4c41;
   /* medium brown */
 }
+
 .recipe p:last-of-type {
   margin-bottom: 0;
   color: #795548;
   /* cocoa brown */
   font-style: italic;
 }
+
 /* selected recipe styling */
 .selected {
   background: #ffe4b5;
@@ -129,28 +142,35 @@ h1 {
   box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
   /* glowing orange */
 }
+
 .selected:hover {
   background: #ffe4b5;
   border-color: #ff8c00;
 }
+
 /* collapsed (filtered out) recipe cards */
 .recipe.collapsed {
   opacity: 0.5;
 }
+
 .recipe.collapsed:hover {
   opacity: 0.75;
 }
+
 /* responsive styles */
 @media (max-width: 768px) {
   body {
     padding: 1rem;
   }
+
   .container {
     padding: 1.5rem;
   }
+
   h1 {
     font-size: 2rem;
   }
+
   .recipe {
     padding: 1.25rem;
   }
