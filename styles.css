@@ -121,7 +121,7 @@ h1 {
 
 .selected:hover {
   background: #ffe4b5;
-  border-color: ff8c00;
+  border-color: #ff8c00;
 }
 
 .recipe.collapsed {
