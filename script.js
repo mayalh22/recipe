@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 searchBox.addEventListener('input', () => {
   const query = searchBox.value.toLowerCase();
-  recipes.forEach(recipe=> {
+  recipes.forEach(recipe => {
     const title = recipe.querySelector('h2').textContent.toLowerCase();
     const ingredients = recipe.textContent.toLowerCase();
 
