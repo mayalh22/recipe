@@ -2,7 +2,7 @@
 body {
   font-family: sans-serif;
   background: #f5f5f5;
-  color: #333;
+  color: #2a2828;
   margin: 0;
   padding: 0;
 }
@@ -27,10 +27,10 @@ h1 {
 }
 
 h2 {
-  color: #c0392b;
+  color: #bc3d2f;
 }
 .selected {
-  background: #ffe5d9;
+  background: #fde0d3;
 }
 
 .recipe {
