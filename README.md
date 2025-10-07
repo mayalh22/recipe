@@ -10,4 +10,4 @@ each recipe has a title/dish name, list of required ingredients, and step by ste
 
 i used html5, css3, and vanilla js
 
-i think later on i might add tags/categories, images
+i think later on i might add tags/categories, images, randomizer
