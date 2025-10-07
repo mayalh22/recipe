@@ -3,52 +3,143 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchBox = document.getElementById('searchBox')
   const showAllBtn = document.getElementById('showAllBtn')
 
-  recipes.forEach(recipe => {
-    recipe.querySelectorAll('p').forEach(p => p.style.display = 'none')
-  })
+  let selectedRecipe = null;
+
+  const hideRecipeDetails = (recipe) => {
+    recipe.querySelectorAll('p').forEach(p => {
+      p.style.display = 'none';
+    });
+  };
+
+  const showRecipeDetails = (recipe) => {
+    recipe.querySelectorAll('p').forEach(p => {
+      p.style.display = 'block';
+    });
+  };
+
+  const selectRecipe = (recipe) => {
+    if (selectedRecipe) {
+      selectedRecipe.classList.remove('selected');
+      hideRecipeDetails(selectedRecipe);
+    }
+
+    recipe.classList.add('selected');
+    showRecipeDetails(recipe);
+    selectedRecipe = recipe;
+
+    recipe.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'nearest'
+    });
+  };
+
+  const deselectRecipe = () => {
+    if (selectedRecipe) {
+      selectedRecipe.classList.remove('selected');
+      hideRecipeDetails(selectedRecipe);
+      selectedRecipe = null;
+    }
+  };
 
   recipes.forEach(recipe => {
-    recipe.addEventListener('click', () => {
-      const isSelected = recipe.classList.contains('selected')
-      
-      recipes.forEach(r => {
-        r.classList.remove('selected')
-        r.querySelectorAll('p').forEach(p => p.style.display = 'none')
-      })
+    hideRecipeDetails(recipe);
 
-      if (!isSelected) {
-        recipe.classList.add('selected')
-        recipe.querySelectorAll('p').forEach(p => p.style.display = 'block')
-        recipe.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+    recipe.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      if (recipe === selectedRecipe) {
+        deselectRecipe();
+      } else {
+        selectRecipe(recipe);
       }
-    })
-  })
+    });
+  });
 
   if (searchBox) {
-    searchBox.addEventListener('input', (e) => {
-      const searchTerm = e.target.value.toLowerCase()
-      
+    const performSearch = (searchTerm) => {
+      const term = searchTerm.toLowerCase().trim();
+      let visibleCount = 0;
+
       recipes.forEach(recipe => {
-        const title = recipe.querySelector('h2').textContent.toLowerCase()
-        const ingredients = recipe.querySelector('p').textContent.toLowerCase()
-        
-        if (title.includes(searchTerm) || ingredients.includes(searchTerm)) {
-          recipe.style.display = 'block'
+        const title = recipe.querySelector('h2')?.textContent.toLowerCase() || '';
+        const paragraphs = Array.from(recipe.querySelectorAll('p'));
+        const allText = [title, ...paragraphs.map(p => p.textContent.toLowerCase())].join(' ');
+
+        const matches = term === '' || allText.includes(term);
+
+        if (matches) {
+          recipe.style.display = 'block';
+          recipe.classList.remove('collapsed');
+          visibleCount++;
         } else {
-          recipe.style.display = 'none'
+          recipe.style.display = 'none';
+          recipe.classList.add('collapsed');
         }
-      })
-    })
+      });
+
+      const existingMessage = document.querySelector('.no-results');
+      if (existingMessage) {
+        existingMessage.remove();
+      }
+
+      if (visibleCount === 0 && term !== '') {
+        const noResults = document.createElement('div');
+        noResults.className = 'no-results';
+        noResults.style.cssText = 'text-align: center; padding: 2rem; color: #8b4513; font-style: italic;';
+        noResults.textContent = `No recipes found for "${searchTerm}"`;
+        document.querySelector('.recipes').appendChild(noResults);
+      }
+    };
+
+    searchBox.addEventListener('input', (e) => {
+      performSearch(e.target.value);
+
+      if (e.target.value.trim() !== '') {
+        deselectRecipe();
+      }
+    });
+
+    searchBox.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        searchBox.value = '';
+        performSearch('');
+        searchBox.blur();
+      }
+    });
   }
 
   if (showAllBtn) {
     showAllBtn.addEventListener('click', () => {
-      recipes.forEach(r => {
-        r.style.display = 'block'
-        r.classList.remove('selected')
-        r.querySelectorAll('p').forEach(p => p.style.display = 'none')
-      })
-      if (searchBox) searchBox.value = ''
-    })
+      recipes.forEach(recipe => {
+        recipe.style.display = 'block';
+        recipe.classList.remove('collapsed');
+      });
+
+      deselectRecipe();
+
+      if (searchBox) {
+        searchBox.value = '';
+      }
+
+      const existingMessage = document.querySelector('.no-results');
+      if (existingMessage) {
+        existingMessage.remove();
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
-})
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.recipe')) {
+      deselectRecipe();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      deselectRecipe();
+    }
+  });
+});

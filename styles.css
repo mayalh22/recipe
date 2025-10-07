@@ -1,4 +1,3 @@
-
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   background: #8b5a3c;
@@ -12,7 +11,7 @@ body {
   margin: 0 auto;
   padding: 2.5rem;
   background: fdf536;
-  box-shadow: 0 8 20px rgba(61,30,10,0.4);
+  box-shadow: 0 8 20px rgba(61, 30, 10, 0.4);
 }
 
 h1 {
@@ -26,6 +25,7 @@ h1 {
   border-bottom: 2px solid #cd853f;
   padding-bottom: 1rem;
 }
+
 #searchBox {
   width: 100%;
   padding: 0.85rem 1rem;
@@ -36,15 +36,18 @@ h1 {
   background: #fff8dc;
   font-family: Georgia, serif;
 }
+
 #searchBox:focus {
   outline: none;
   border-color: #8b4513;
   background: #fffaf0;
 }
+
 #searchBox::placeholder {
   color: #a0826d;
   font-style: italic;
 }
+
 #showAllBtn {
   padding: 0.75rem 1.5rem;
   margin-bottom: 2rem;
@@ -75,6 +78,7 @@ h1 {
   transition: all 0.3s ease;
   background: #fffaed;
 }
+
 .recipe:hover {
   background: #fff8e1;
   border-color: #cd853f;
@@ -132,15 +136,19 @@ recipe p:last-of-type {
   body {
     padding: 1rem;
   }
+
   .container {
     padding: 1.5rem;
   }
+
   h1 {
     font-size: 2rem;
   }
+
   .recipe {
     padding: 1.25rem;
   }
+
   .recipe h2 {
     font-size: 1.125rem;
   }
